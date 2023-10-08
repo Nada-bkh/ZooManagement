@@ -66,7 +66,7 @@ public class ZooManagement {
         //INSTRUCTION 7
 
       /*
-       Animal lion = new Animal("Félin", "Lion", 5, true);
+        Animal lion = new Animal("Félin", "Lion", 5, true);
         Animal elephant = new Animal("Éléphantidé", "Éléphant", 10, true);
         Animal giraffe = new Animal("Girafidé", "Girafe", 7, true);
 
@@ -107,7 +107,7 @@ public class ZooManagement {
         System.out.println(lion); */
 
         //INSTRUCTION 10
-        Zoo myZoo = new Zoo("Mon Zoo", "Ma Ville", 3); // Capacité du zoo de 3 animaux
+        //Zoo myZoo = new Zoo("Mon Zoo", "Ma Ville"); // Capacité du zoo de 3 animaux
         // Créez des animaux
         Animal lion = new Animal("Félin", "Lion", 5, true);
         /*Animal elephant = new Animal("Éléphantidé", "Éléphant", 10, true);
@@ -122,10 +122,10 @@ public class ZooManagement {
 
         // Affichez le nombre d'animaux dans le zoo
         System.out.println("Nombre d'animaux dans le zoo : " + myZoo.getAnimalCount()); */
-        boolean ajoutLion = myZoo.addAnimal(lion);
+        //boolean ajoutLion = myZoo.addAnimal(lion);
 
         // Affichez les animaux dans le zoo en utilisant la méthode displayAnimals
-        myZoo.displayAnimals();
+        // myZoo.displayAnimals();
 
         // Cherchez l'animal "Lion" dans le zoo en utilisant la méthode searchAnimal
         // int foundIndex = myZoo.searchAnimal("Lion");
@@ -140,7 +140,7 @@ public class ZooManagement {
             System.out.println("Animal non trouvé.");
         }*/
         //INSTRUCTION 13
-        boolean suppressionLion = myZoo.removeAnimal(lion);
+     /*   boolean suppressionLion = myZoo.removeAnimal(lion);
         if (ajoutLion) {
             System.out.println("Lion ajouté au zoo.");
         } else {
@@ -155,5 +155,22 @@ public class ZooManagement {
 
         // Affichez à nouveau les animaux dans le zoo pour vérifier la suppression
         myZoo.displayAnimals();
+    }*/
+        Zoo zoo1 = new Zoo("Zoo 1", "Ville 1", 30); // Zoo avec 30 cages
+        Zoo zoo2 = new Zoo("Zoo 2", "Ville 2", 10); // Zoo avec 10 cages
+
+        // Ajoutez des animaux à zoo1 et zoo2 ici...
+
+        if (Zoo.isZooFull(zoo1)) {
+            System.out.println(zoo1.name + " est plein.");
+        } else {
+            System.out.println(zoo1.name + " n'est pas plein.");
+        }
+
+        if (Zoo.isZooFull(zoo2)) {
+            System.out.println(zoo2.name + " est plein.");
+        } else {
+            System.out.println(zoo2.name + " n'est pas plein.");
+        }
     }
 }
