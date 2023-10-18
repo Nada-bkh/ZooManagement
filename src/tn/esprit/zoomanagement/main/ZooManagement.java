@@ -1,8 +1,12 @@
-package zoomanagement;
+package tn.esprit.zoomanagement.main;
+
+import tn.esprit.zoomanagement.entities.Animal;
+import tn.esprit.zoomanagement.entities.Zoo;
 
 /**
  * @author nadab
  */
+
 public class ZooManagement {
 
     public static void main(String[] args) {
@@ -109,7 +113,7 @@ public class ZooManagement {
         //INSTRUCTION 10
         //Zoo myZoo = new Zoo("Mon Zoo", "Ma Ville"); // Capacité du zoo de 3 animaux
         // Créez des animaux
-        Animal lion = new Animal("Félin", "Lion", 5, true);
+        // Animal lion = new Animal("Félin", "Lion", 5, true);
         /*Animal elephant = new Animal("Éléphantidé", "Éléphant", 10, true);
         Animal giraffe = new Animal("Girafidé", "Girafe", 7, true);
         Animal tiger = new Animal("Félin", "Tigre", 6, true);
@@ -156,7 +160,7 @@ public class ZooManagement {
         // Affichez à nouveau les animaux dans le zoo pour vérifier la suppression
         myZoo.displayAnimals();
     }*/
-        Zoo zoo1 = new Zoo("Zoo 1", "Ville 1", 30); // Zoo avec 30 cages
+       /* Zoo zoo1 = new Zoo("Zoo 1", "Ville 1", 30); // Zoo avec 30 cages
         Zoo zoo2 = new Zoo("Zoo 2", "Ville 2", 10); // Zoo avec 10 cages
 
         // Ajoutez des animaux à zoo1 et zoo2 ici...
@@ -171,6 +175,13 @@ public class ZooManagement {
             System.out.println(zoo2.name + " est plein.");
         } else {
             System.out.println(zoo2.name + " n'est pas plein.");
-        }
+        } */
+        Animal animal = new Animal("Félin", "n", 5, true);
+
+        Zoo myZoo = new Zoo("My Zoo", "Monastir", 5);
+
+        myZoo.addAnimal(animal, myZoo);
+
+
     }
 }

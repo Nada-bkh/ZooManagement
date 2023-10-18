@@ -1,4 +1,4 @@
-package zoomanagement;
+package tn.esprit.zoomanagement.entities;
 
 public class Animal {
     String family;
@@ -14,34 +14,50 @@ public class Animal {
     }
 
     public String getFamily() {
+
         return family;
     }
 
     public void setFamily(String family) {
+
         this.family = family;
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name.isEmpty()) {
+            System.out.println("Veuillez entrez un nom valide.");
+        } else {
+            this.name = name;
+        }
     }
 
     public int getAge() {
+
         return age;
     }
 
     public void setAge(int age) {
-        this.age = age;
+
+        if (age >= 0) {
+            this.age = age;
+        } else {
+            System.out.println("L'âge doit être positif.");
+        }
+
     }
 
     public boolean isMammal() {
+
         return isMammal;
     }
 
     public void setMammal(boolean mammal) {
+
         isMammal = mammal;
     }
 

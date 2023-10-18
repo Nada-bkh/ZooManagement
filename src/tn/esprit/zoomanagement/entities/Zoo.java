@@ -1,14 +1,15 @@
-package zoomanagement;
+package tn.esprit.zoomanagement.entities;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class Zoo {
-    private Set<Animal> animals = new HashSet<>();
+    public Set<Animal> animals = new HashSet<>();
     public String name;
-    private String city;
-    private int maxCages;
-    private static final int MAX_ANIMALS = 25; // Constante pour le nombre maximal d'animaux
+    public String city;
+    public int age;
+    public int maxCages;
+    public static final int MAX_ANIMALS = 25; // Constante pour le nombre maximal d'animaux
 
    /* public Zoo(String name, String city) {
         this.name = name;
@@ -53,13 +54,14 @@ public class Zoo {
              return false;
          }
      }*/
-    public boolean addAnimal(Animal animal) {
+    /*public boolean addAnimal(Animal animal) {
         if (animals.size() < MAX_ANIMALS) {
             return animals.add(animal); // Ajout réussi
         } else {
             return false; // Le zoo est plein, ajout échoué
         }
-    }
+    }*/
+
 
     public boolean removeAnimal(Animal animal) {
         return animals.remove(animal); // Supprime l'animal et renvoie true si la suppression réussit, sinon false
@@ -122,6 +124,21 @@ public class Zoo {
 
     public static boolean isZooFull(Zoo zoo) {
         int numAnimals = zoo.animals.size();
-        return (numAnimals >= MAX_ANIMALS) || (numAnimals >= zoo.maxCages);
+        return (zoo.maxCages >= MAX_ANIMALS);
+    }
+
+    public boolean addAnimal(Animal animal, Zoo zoo) {
+
+        if (isZooFull(zoo)) {
+            System.out.println("Le zoo est plein.");
+        } else if (animal.age <= 0) {
+            System.out.println("L'âge doit être positif.");
+        } else if (animal.name.isEmpty()) {
+            System.out.println("Veuillez entrer un nom.");
+        } else {
+            System.out.println("Votre animal est ajouter avec succés.");
+            return animals.add(animal); // Ajout réussi
+        }
+        return false;
     }
 }
