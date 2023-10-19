@@ -1,7 +1,6 @@
 package tn.esprit.zoomanagement.main;
 
-import tn.esprit.zoomanagement.entities.Animal;
-import tn.esprit.zoomanagement.entities.Zoo;
+import tn.esprit.zoomanagement.entities.*;
 
 /**
  * @author nadab
@@ -182,6 +181,28 @@ public class ZooManagement {
 
         myZoo.addAnimal(animal, myZoo);
 
+        // Créez une instance de AnimalAquatique (constructeur par défaut)
+        AnimalAquatique animalAquatique = new AnimalAquatique("Océan");
 
+        // Créez une instance de AnimalTerrestre avec le constructeur paramétré
+        AnimalTerrestre animalTerrestre = new AnimalTerrestre(4);
+
+        // Créez une instance de Dolphin (Dauphin) avec le constructeur paramétré
+        Dolphin dolphin = new Dolphin("Océan", 20.0f);
+
+        // Créez une instance de Penguin (Pingouin) avec le constructeur paramétré
+        Penguin penguin = new Penguin("Antarctique", 50.0f);
+
+        // Vous avez maintenant créé une instance de chaque classe avec les constructeurs paramétrés
+
+        // Affichez les objets en utilisant la méthode toString()
+        System.out.println("Animal Aquatique: " + animalAquatique);
+        System.out.println("Animal Terrestre: " + animalTerrestre);
+        System.out.println("Dauphin: " + dolphin);
+        System.out.println("Pingouin: " + penguin);
+
+        animalAquatique.swim();
+        dolphin.swim();
+        penguin.swim();
     }
 }
