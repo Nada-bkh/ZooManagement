@@ -3,8 +3,8 @@ package tn.esprit.zoomanagement.entities;
 public class Dolphin extends AnimalAquatique {
     private float swimmingSpeed;
 
-    public Dolphin(String habitat, float swimmingSpeed) {
-        super(habitat);
+    public Dolphin(String family, String name, int age, boolean isMammal, String habitat, float swimmingSpeed) {
+        super(family, name, age, isMammal, habitat); //constructeur du classe mère en utilisant super
         this.swimmingSpeed = swimmingSpeed;
     }
 
@@ -18,6 +18,7 @@ public class Dolphin extends AnimalAquatique {
 
     @Override
     public String toString() {
+
         return super.toString() + ", Vitesse de nage: " + swimmingSpeed;
     }
 

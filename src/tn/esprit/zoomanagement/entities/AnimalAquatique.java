@@ -1,9 +1,10 @@
 package tn.esprit.zoomanagement.entities;
 
-public class AnimalAquatique {
+public class AnimalAquatique extends Animal {
     private String habitat;
 
-    public AnimalAquatique(String habitat) {
+    public AnimalAquatique(String family, String name, int age, boolean isMammal, String habitat) {
+        super(family, name, age, isMammal);
         this.habitat = habitat;
     }
 
@@ -17,7 +18,7 @@ public class AnimalAquatique {
 
     @Override
     public String toString() {
-        return "Habitat: " + habitat;
+        return super.toString() + "Habitat: " + habitat;
     }
 
     public void swim() {

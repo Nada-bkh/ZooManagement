@@ -17,6 +17,6 @@ public class AnimalTerrestre {
 
     @Override
     public String toString() {
-        return "Nombre de pattes: " + nbrLegs;
+        return super.toString() + "Nombre de pattes: " + nbrLegs;
     }
 }

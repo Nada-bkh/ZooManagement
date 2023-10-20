@@ -182,16 +182,16 @@ public class ZooManagement {
         myZoo.addAnimal(animal, myZoo);
 
         // Créez une instance de AnimalAquatique (constructeur par défaut)
-        AnimalAquatique animalAquatique = new AnimalAquatique("Océan");
+        AnimalAquatique animalAquatique = new AnimalAquatique("Océan", "bear", 15, true, "mountain");
 
         // Créez une instance de AnimalTerrestre avec le constructeur paramétré
         AnimalTerrestre animalTerrestre = new AnimalTerrestre(4);
 
         // Créez une instance de Dolphin (Dauphin) avec le constructeur paramétré
-        Dolphin dolphin = new Dolphin("Océan", 20.0f);
+        Dolphin dolphin = new Dolphin("Océan", "dolphin", 5, true, "ocean", 50.0f);
 
         // Créez une instance de Penguin (Pingouin) avec le constructeur paramétré
-        Penguin penguin = new Penguin("Antarctique", 50.0f);
+        Penguin penguin = new Penguin("Antarctique", "penguin", 10, true, "antarctique", 50.0f);
 
         // Vous avez maintenant créé une instance de chaque classe avec les constructeurs paramétrés
 
